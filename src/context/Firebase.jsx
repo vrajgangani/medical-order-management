@@ -16,6 +16,8 @@ import {
   doc,
   query,
   where,
+  setDoc,
+  deleteDoc,
 } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
@@ -63,8 +65,10 @@ export const FirebaseProvider = (props) => {
     setUser(null);
   };
 
+  const isLoggedIn = user ? true : false;
+
   const handleCreateNewListing = async (
-    medicinename,
+    name,
     price,
     discription,
     manufacutreDate,
@@ -78,17 +82,17 @@ export const FirebaseProvider = (props) => {
     );
     const uploadResult = await uploadBytes(imageRef, coverPic);
     return await addDoc(collection(firestore, "medicine"), {
-      medicinename,
+      name,
       discription,
       price,
       manufacutreDate,
       expireDate,
       manufactureName,
       imageURL: uploadResult.ref.fullPath,
-      userID: user.uid,
-      userEmail: user.email,
-      displayName: user.displayName,
-      photoURL: user.photoURL,
+      // userID: user.uid,
+      // userEmail: user.email,
+      // displayName: user.displayName,
+      // photoURL: user.photoURL,
     });
   };
 
@@ -141,7 +145,13 @@ export const FirebaseProvider = (props) => {
     return result;
   };
 
-  const isLoggedIn = user ? true : false;
+  const updateProductData = async (medicineID, updatedObject) => {
+    await setDoc(doc(firestore, "medicine", medicineID), updatedObject);
+  };
+
+  const deleteProductData = async (medicineID) => {
+    await deleteDoc(doc(firestore, "medicine", medicineID));
+  };
 
   return (
     <FirebaseContext.Provider
@@ -158,6 +168,8 @@ export const FirebaseProvider = (props) => {
         isLoggedIn,
         user,
         logoutUser,
+        deleteProductData,
+        updateProductData,
       }}
     >
       {props.children}

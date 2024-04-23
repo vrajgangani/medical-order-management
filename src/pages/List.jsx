@@ -5,7 +5,7 @@ import { useFirebase } from "../context/Firebase";
 const ListingPage = () => {
   const firebase = useFirebase();
 
-  const [medicinename, setMedicineName] = useState("");
+  const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [discription, setDiscription] = useState("");
   const [manufacutreDate, setManufacrureDate] = useState("");
@@ -16,7 +16,7 @@ const ListingPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await firebase.handleCreateNewListing(
-      medicinename,
+      name,
       price,
       discription,
       manufacutreDate,
@@ -25,7 +25,7 @@ const ListingPage = () => {
       coverPic
     );
 
-    setMedicineName("");
+    setName("");
     setPrice("");
     setCoverPic("");
     setDiscription("");
@@ -47,8 +47,8 @@ const ListingPage = () => {
             class="bg-white-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:outline-none block w-full p-2.5"
             placeholder="Enter Medicine Name"
             required
-            value={medicinename}
-            onChange={(e) => setMedicineName(e.target.value)}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div className="mb-1">

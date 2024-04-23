@@ -24,7 +24,9 @@ const MedicineCard = (props) => {
           {props.name}
         </h5>
         <div class="flex items-center justify-center">
-          <span class="text-2xl font-bold text-black-900 me-3">₹{props.price}</span>
+          <span class="text-2xl font-bold text-black-900 me-3">
+            ₹{props.price}
+          </span>
           <button
             onClick={(e) => navigate(props.link)}
             class="text-white bg-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
