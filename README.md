@@ -1,72 +1,51 @@
-# Getting Started with Create React App
+Medical Order Management
 
-This project was bootstrapped with [Create React App](https://github.com/facemedicine/create-react-app).
+A web application built using React, Bootstrap, Tailwind CSS, and Firebase for managing medical orders.
 
-## Available Scripts
+🚀 Features
 
-In the project directory, you can run:
+User authentication with Firebase
 
-### `npm start`
+Manage medical orders efficiently
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Responsive UI using Bootstrap & Tailwind CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📂 Clone and Setup
 
-### `npm test`
+Follow these steps to set up the project locally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facemedicine.github.io/create-react-app/docs/running-tests) for more information.
+1️⃣ Clone the Repository
 
-### `npm run build`
+`git clone https://github.com/vrajgangani/medical-order-management.git`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2️⃣ Navigate to the Project Directory
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`cd medical-order-management`
 
-See the section about [deployment](https://facemedicine.github.io/create-react-app/docs/deployment) for more information.
+3️⃣ Install Dependencies
 
-### `npm run eject`
+`npm install`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4️⃣ Setup Firebase Configuration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+currently added my account details for firebase in context folder (don't touch it)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5️⃣ Start the Development Server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`npm start`
 
-## Learn More
+This will start the application on http://localhost:3000/.
 
-You can learn more in the [Create React App documentation](https://facemedicine.github.io/create-react-app/docs/getting-started).
+🛠 Built With
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+React.js - Frontend library
 
-### Code Splitting
+Firebase - Backend for authentication and data storage
 
-This section has moved here: [https://facemedicine.github.io/create-react-app/docs/code-splitting](https://facemedicine.github.io/create-react-app/docs/code-splitting)
+Bootstrap - UI components
 
-### Analyzing the Bundle Size
+Tailwind CSS - Utility-first CSS framework
 
-This section has moved here: [https://facemedicine.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facemedicine.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📌 Contributing
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facemedicine.github.io/create-react-app/docs/making-a-progressive-web-app](https://facemedicine.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facemedicine.github.io/create-react-app/docs/advanced-configuration](https://facemedicine.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facemedicine.github.io/create-react-app/docs/deployment](https://facemedicine.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facemedicine.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facemedicine.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# medical-order-management" 
-"# medical-order-management" 
+Feel free to fork the repository and submit pull requests!
