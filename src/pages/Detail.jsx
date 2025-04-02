@@ -38,17 +38,15 @@ const Detail = () => {
   `;
 
   useEffect(() => {
-    firebase
-      .getmedicineById(params.medicineId)
-      .then((value) => setData(value.data()));
-  }, []);
+    firebase.getmedicineById(params.medicineId).then((value) => setData(value.data()));
+  }, [firebase, params.medicineId]);
 
   useEffect(() => {
     if (data) {
       const imageURL = data?.imageURL;
       firebase.getImageURL(imageURL).then((url) => setURL(url));
     }
-  }, [data]);
+  }, [data, firebase]);
 
   const sendEmail = () => {
     window.Email.send({
@@ -93,9 +91,7 @@ const Detail = () => {
         <Modal.Header />
         <Modal.Body>
           <div className="space-y-6">
-            <h3 className="text-xl font-medium text-gray-900 dark:text-white">
-              Update Information
-            </h3>
+            <h3 className="text-xl font-medium text-gray-900 dark:text-white">Update Information</h3>
             <div>
               <div className="mb-2 block">
                 <Label htmlFor="text" value="Name" />
