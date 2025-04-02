@@ -29,10 +29,7 @@ function App() {
         <Route path="/medicine/list" element={<ListingPage />} />
         <Route path="/medicine/view/:medicineId" element={<Detail />} />
         <Route path="/medicine/orders" element={<OrdersPage />} />
-        <Route
-          path="/medicine/orders/:medicineId"
-          element={<ViewOrderDetails />}
-        />
+        <Route path="/medicine/orders/:medicineId" element={<ViewOrderDetails />} />
       </Routes>
     </div>
   );
